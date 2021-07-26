@@ -14,12 +14,12 @@
     // require("../models/paginacion.php");
     ?>
     <div>
-        <form action="" method="post">
-            <input type="text" name="txtUsu" id="" placeholder="Usuario">
-            <input type="password" name="txtCla" id="" placeholder="Clave">
-            <input type="text" name="txtDir" id="" placeholder="Dirección"><br>
-            <input type="text" name="txtTel" id="" placeholder="Teléfono">
-            <input type="text" name="txtNom" id="" placeholder="Nombres">
+        <form action="../controllers/C_Usuarios.php?accion=nuevo" method="post">
+            <input type="text" name="txtUsu" id="" placeholder="Usuario" require>
+            <input type="password" name="txtCla" id="" placeholder="Clave" require>
+            <input type="text" name="txtDir" id="" placeholder="Dirección" require><br>
+            <input type="text" name="txtTel" id="" placeholder="Teléfono" require>
+            <input type="text" name="txtNom" id="" placeholder="Nombres" require>
             <select name="txtTipUsu" id="">
                 <?php
                 $um = new UsuarioModel;
@@ -54,7 +54,7 @@
                 echo "<td>" . $user["nombres"] . "</td>";
                 echo "<td>" . $user["tipoUsuario_idtipousuario"] . "</td>";
                 echo "<td><a href=''><input type='submit' value='Editar'></a>";
-                echo "<a href='controllers/C_Usuarios.php?opcion=eliminar?&fila=".$user["idusuario"]."'><input type='submit' value='Eliminar'></a>";
+                echo "<a href='../controllers/C_Usuarios.php?opcion=eliminar&fila=".$user["idusuario"]."'><input type='submit' value='Eliminar'></a>";
                 echo "</td>";
                 // for ($i = 1; $i < $totalPaginas; $i++) {
                 //     echo "<a href='?pagina=" . $i . "'>" . $i . "</a>";

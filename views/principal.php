@@ -9,9 +9,8 @@
 <body>
     <?php
         require("../controllers/C_Usuarios.php");
-        // $usu = new Usuario();
-        // $usu->obtenerDatosUsuario();
     ?>
+    
 </body>
 </html>
 

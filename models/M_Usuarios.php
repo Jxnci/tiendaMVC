@@ -17,10 +17,25 @@ class UsuarioModel {
         return $this->usuarios;
     }
 
+    public function nuevoUsuario() {
+        $sql = "INSERT INTO usuario (usuario,clave,direccion,telefono,nombres,tipoUsuario_idtipousuario)
+         VALUES ()";
+        if ($this->db->query($sql) === TRUE) {
+            echo "El usuario se agrego correctamente";
+        } else {
+            echo "No se pudo agregar: " . $this->db->error;
+        }
+        $this->db->close();
+    }
+
     public function deleteUsuario($fila) {
-        $fila=$_GET["fila"];
-        echo $fila;
-        $sql = $this->db->query("DELETE * FROM usuario WHERE = " . $fila);
+        $sql = "DELETE FROM usuario WHERE idusuario=" . $fila;
+        if ($this->db->query($sql) === TRUE) {
+            echo "El usuario se elimino correctamente";
+        } else {
+            echo "No se pudo eliminar: " . $this->db->error;
+        }
+        $this->db->close();
         header("Location: ../views/principal.php");
     }
 

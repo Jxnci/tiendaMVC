@@ -3,18 +3,20 @@ require_once("../models/M_Usuarios.php");
 
 $usuarios = new UsuarioModel;
 $matrizUsuario = $usuarios->getUsuario();
-if ($_GET) {
-    $opcion = $_GET["opcion"];
-    switch ($opcion) {
+if (isset($_GET["opcion"])) {
+    switch ($_GET["opcion"]) {
         case 'eliminar':
             $usuarios->deleteUsuario($_GET["fila"]);
             break;
-
+        case 'nuevo':
+            echo "Se creo un nuevo usuario";
+            // $usuarios->nuevoUsuario();
+            break;
         default:
-            # code...
+            echo "No suceda nada :c";
+            echo "Accion : ".$_GET["opcion"];
             break;
     }
 }
-
 require_once("../views/V_Usuarios.php");
 ?>s
