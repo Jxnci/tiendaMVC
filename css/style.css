@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+:root{
+    --color1:#F0DFFF;
+    --color2:#AD8EEA;
+    --color3:#56168B;
+    --color4:#000000;
+}
+
+html{
+	font-size: 62.5%;
+}
+body{
+	display: flex;
+	font-size: 2rem;
+	color: white;
+	margin-top: 7rem; 
+	text-align: center;
+	justify-content: center;
+    background: var(--color1);
+	background-image: url(../fondos/fondo.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+body div{
+	justify-content: space-around;
+}
+.logo-login{
+	background: #fff;
+	padding: 15rem 4rem;
+	display: block;
+	border-radius: 0rem 1.5rem 1.5rem 0rem;
+    box-shadow:10px 10px 10px -8px #000;
+}
+.form-login{
+	background-color: rgba(220,220,220,0.5);
+	border-radius: 1.5rem 0rem 0rem 1.5rem;
+	padding: 6rem 10rem;
+}
+.form-login header{
+	padding: 1rem 0rem 1rem;
+	color: var(--color3);
+	font-weight: bold;
+	letter-spacing: 0.4rem;
+}
+.input-login input{
+	display: block;
+    background: none;
+    border:none;
+	border-bottom: solid .2rem var(--color3);
+    
+	color: var(--color4);
+	outline: none;
+	border-radius: .4rem;
+	margin: 3rem 0rem;
+	padding: 1.3rem 5rem;
+	font-size: 1.6rem;
+	text-align: center;
+	font-weight: bold;
+}
+.datos-login input:active{
+	border-color: none;
+	border: none;
+}
+button{
+	display: inline-block;
+  	border-radius: 4px;
+  	background: var(--color3);
+  	border: none;
+  	color: white;
+  	text-align: center;
+  	font-size: 2rem;
+  	padding: 1.3rem 6rem;
+  	cursor: pointer;
+}
+button:hover{
+	transition: all 0.5s;
+	background: var(--color2);
+    color: white;
+}
+.form-login a{
+    width: 100%;
+    margin: 0 0 2rem 0;
+    padding: 0 0 2rem 0;
+	font-size: 1.4rem;
+	color: var(--color3);
+	text-decoration: none;
+}
+.form-login a:hover{
+	color: var(--color4);
+}
+
+img{
+    width: 350px;
+}
