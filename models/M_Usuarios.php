@@ -3,10 +3,12 @@
 class UsuarioModel {
     private $db;
     private $usuarios;
+    private $mensaje;
     public function __construct() {
         require_once("Conectar.php");
         $this->db = Conectar::Conexion();
         $this->usuarios = array();
+        $this->mensaje = "";
     }
 
     public function getUsuario() {
@@ -21,19 +23,20 @@ class UsuarioModel {
         $sql = "INSERT INTO usuario (usuario,clave,direccion,telefono,nombres,tipoUsuario_idtipousuario)
          VALUES ()";
         if ($this->db->query($sql) === TRUE) {
-            echo "El usuario se agrego correctamente";
+            $this->mensaje = "El usuario se agrego correctamente";
         } else {
-            echo "No se pudo agregar: " . $this->db->error;
+            $this->mensaje = "No se pudo agregar: " . $this->db->error;
         }
         $this->db->close();
+        header("Location: ../views/principal.php");
     }
 
     public function deleteUsuario($fila) {
         $sql = "DELETE FROM usuario WHERE idusuario=" . $fila;
         if ($this->db->query($sql) === TRUE) {
-            echo "El usuario se elimino correctamente";
+            $this->mensaje = "El usuario se elimino correctamente";
         } else {
-            echo "No se pudo eliminar: " . $this->db->error;
+            $this->mensaje = "No se pudo eliminar: " . $this->db->error;
         }
         $this->db->close();
         header("Location: ../views/principal.php");

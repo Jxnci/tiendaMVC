@@ -10,7 +10,7 @@ if (isset($_GET["opcion"])) {
             break;
         case 'nuevo':
             echo "Se creo un nuevo usuario";
-            // $usuarios->nuevoUsuario();
+            $usuarios->nuevoUsuario();
             break;
         default:
             echo "No suceda nada :c";
@@ -18,5 +18,6 @@ if (isset($_GET["opcion"])) {
             break;
     }
 }
+// header("Location: principal.php");
 require_once("../views/V_Usuarios.php");
-?>s
+?>

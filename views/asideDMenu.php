@@ -1,4 +1,4 @@
-<aside>
+<section class="lateral">
     <div>
         <img src="../icons/logo1.jpeg" alt="Logo Perfecta" width="200px;">
     </div>
@@ -22,4 +22,4 @@
     <div>
         <a href="../"><button type="submit">Cerrar Sesión</button></a>
     </div>
-</aside>
+</section>
