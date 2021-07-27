@@ -1,25 +1,31 @@
 <section class="lateral">
     <div>
-        <img src="../icons/logo1.jpeg" alt="Logo Perfecta" width="200px;">
+        <h3>historial de operaciones</h3>
     </div>
     <div>
-        <ul>
-            <li><a href=""> Ventas</a></li>
-            <li><a href=""> Usuarios</a></li>
-            <li><a href=""> Clientes</a></li>
-            <li><a href=""> Productos</a></li>
-            <li><a href=""> proveedores</a></li>
-            <li><a href=""> Tipo de Usuario</a></li>
-            <li><a href=""> Categoria</a></li>
-        </ul>
-    </div>
-    <div>  
-        <ul>
-            <li><a href=""> Permisos</a></li>
-            <li><a href=""> Estadisticas</a></li>
-        </ul>
-    </div>
-    <div>
-        <a href="../"><button type="submit">Cerrar Sesión</button></a>
+        <div class="card">
+            <div>
+                <h4>Operacion N°##</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga voluptate </p>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <h4>Operacion N°##</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga voluptate </p>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <h4>Operacion N°##</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga voluptate </p>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <h4>Operacion N°##</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga voluptate </p>
+            </div>
+        </div>
     </div>
 </section>

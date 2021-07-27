@@ -13,13 +13,10 @@
             <li><a href=""> Categoria</a></li>
         </ul>
     </div>
-    <div>  
+    <div>
         <ul>
             <li><a href=""> Permisos</a></li>
             <li><a href=""> Estadisticas</a></li>
         </ul>
-    </div>
-    <div>
-        <a href="../"><button type="submit">Cerrar Sesión</button></a>
     </div>
 </aside>

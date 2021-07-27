@@ -23,11 +23,10 @@
                 require("../views/headerMenu.php");
                 ?>
             </div>
-            <div>
+            <div class="principal__items">
                 <?php
                 require("../controllers/C_Usuarios.php");
-
-                require("../views/asideMenu.php");
+                require("../views/asideDMenu.php");
                 ?>
             </div>
         </div>
