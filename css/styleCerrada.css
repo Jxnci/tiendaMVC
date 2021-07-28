@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Open Sans', sans-serif;
+}
+:root{
+    --color1:#F0DFFF;
+    --color2:#AD8EEA;
+    --color3:#56168B;
+    --color4:#000000;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boton{
+    display: flex;
+}
+a{
+    margin: 20px auto;
+    padding: 20px;
+    text-decoration: none;
+    background: var(--color3);
+    color: var(--color1);
+    transition: all .2s;
+}
+a:hover{
+    color: var(--color4);
+    background: var(--color2);
+}

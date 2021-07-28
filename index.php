@@ -1,6 +1,3 @@
-<?php
-
-?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -10,23 +7,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap" rel="stylesheet">
     <title>Perfecta</title>
 </head>
 
 <body>
     <div class="form-login">
         <header>Bisuteria Perfecta</header>
-        <form method="post" action="views/principal.php">
+        <form method="post" action="models/sesion.php">
             <div class="input-login">
-                <input type="text" name="txtUsuario" placeholder="Ingrese Usuario" required="true">
-                <input type="password" name="txtPass" placeholder="Ingrese Contraseña" minlength="5">
+                <input type="text" name="txtUsu" placeholder="Ingrese Usuario" required>
+                <input type="password" name="txtPass" placeholder="Ingrese Contraseña" require>
                 <div>
                     <a href="http://">
                         <h4>Regístrate</h4>
                     </a>
                 </div><br>
             </div>
-            <button name="btnAcceso">Acceder</button>
+            <button name="btnEnviar">Acceder</button>
         </form>
     </div>
     <div class="logo-login">

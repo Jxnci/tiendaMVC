@@ -1,4 +1,4 @@
-<?php require_once("../models/M_Usuarios.php"); ?>
+<?php require_once("../models/M_Ventas.php"); ?>
 
 <main>
     <?php
@@ -13,8 +13,8 @@
             <input type="text" name="txtNom" id="" placeholder="Nombres" require>
             <select name="txtTipUsu" id="">
                 <?php
-                $um = new UsuarioModel;
-                $um->cmbTipoUsuario();
+                // $um = new UsuarioModel;
+                // $um->cmbTipoUsuario();
                 ?>
             </select>
             <a href='insertar.php'><input type='submit' value='Agregar'></a>
@@ -36,24 +36,23 @@
             </thead>
             <tbody>
                 <?php
-                require_once("../controllers/C_Usuarios.php");
-                foreach ($matrizUsuario as $user) {
-                    echo "<tr>";
-                    echo "<td>" . $user["idusuario"] . "</td>";
-                    echo "<td>" . $user["usuario"] . "</td>";
-                    echo "<td>" . $user["clave"] . "</td>";
-                    echo "<td>" . $user["direccion"] . "</td>";
-                    echo "<td>" . $user["telefono"] . "</td>";
-                    echo "<td>" . $user["nombres"] . "</td>";
-                    echo "<td>" . $user["tipoUsuario_idtipousuario"] . "</td>";
-                    echo "<td><a href='' class='bteditar'>Editar</a>";
-                    echo "<a href='../controllers/C_Usuarios.php?opcion=eliminar&fila=" . $user["idusuario"] .
-                     "' class='bteliminar'>Eliminar</a>";
-                    echo "</td>";
+                // foreach ($matrizUsuario as $user) {
+                //     echo "<tr>";
+                //     echo "<td>" . $user["idusuario"] . "</td>";
+                //     echo "<td>" . $user["usuario"] . "</td>";
+                //     echo "<td>" . $user["clave"] . "</td>";
+                //     echo "<td>" . $user["direccion"] . "</td>";
+                //     echo "<td>" . $user["telefono"] . "</td>";
+                //     echo "<td>" . $user["nombres"] . "</td>";
+                //     echo "<td>" . $user["tipoUsuario_idtipousuario"] . "</td>";
+                //     echo "<td><a href='' class='bteditar'>Editar</a>";
+                //     echo "<a href='../controllers/C_Usuarios.php?opcion=eliminar&fila=" . $user["idusuario"] .
+                //      "' class='bteliminar'>Eliminar</a>";
+                //     echo "</td>";
                     // for ($i = 1; $i < $totalPaginas; $i++) {
                     //     echo "<a href='?pagina=" . $i . "'>" . $i . "</a>";
                     // }
-                }
+                // }
                 ?>
             </tbody>
         </table>

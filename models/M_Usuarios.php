@@ -21,7 +21,7 @@ class UsuarioModel {
 
     public function nuevoUsuario() {
         $sql = "INSERT INTO usuario (usuario,clave,direccion,telefono,nombres,tipoUsuario_idtipousuario)
-         VALUES ()";
+         VALUES ('','','','','','')";
         if ($this->db->query($sql) === TRUE) {
             $this->mensaje = "El usuario se agrego correctamente";
         } else {

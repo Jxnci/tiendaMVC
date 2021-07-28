@@ -9,6 +9,8 @@ class Conectar {
             echo "Linea del error".$e->getLine();
         }
         return $con;
-    }
+    }       
 }
+    
 ?>
+   
