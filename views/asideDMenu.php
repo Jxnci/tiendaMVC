@@ -5,25 +5,25 @@
     <div>
         <div class="card">
             <div>
-                <h4>Operacion N°##</h4>
+                <h4>Operación N°##</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga voluptate </p>
             </div>
         </div>
         <div class="card">
             <div>
-                <h4>Operacion N°##</h4>
+                <h4>Operación N°##</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga voluptate </p>
             </div>
         </div>
         <div class="card">
             <div>
-                <h4>Operacion N°##</h4>
+                <h4>Operación N°##</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga voluptate </p>
             </div>
         </div>
         <div class="card">
             <div>
-                <h4>Operacion N°##</h4>
+                <h4>Operación N°##</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga voluptate </p>
             </div>
         </div>

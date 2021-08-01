@@ -16,22 +16,22 @@ class controlVentana{
                     require("V_Usuarios.php");
                     break;
                 case 'cliente':
-                    echo "Se mostro la ventana de cliente";
+                    require("V_Cliente.php");
                     break;
                 case 'producto':
-                    echo "Se creo un nuevo producto";
+                    require("V_Producto.php");
                     break;
                 case 'provee':
-                    echo "Se mostro la ventana de provee";
+                    require("V_Proveedore.php");
                     break;
                 case 'tipusu':
-                    echo "Se creo un nuevo tipusu";
+                    require("V_TipoUsuario.php");
                     break;
                 case 'cate':
-                    echo "Se creo un nuevo cate";
+                    require("V_Categoria.php");
                     break;
                 case 'permi':
-                    echo "Se creo un nuevo permi";
+                    require("V_Permisos.php");
                     break;
                 case 'estad':
                     require("estadisticas.php");
@@ -46,6 +46,10 @@ class controlVentana{
             // require("../views/estadisticas.php");
         }
     }
+
+    public function mostrarTitulo(){
+        
+    }
     
 
 }
@@ -53,3 +57,4 @@ class controlVentana{
 
 // header("Location: ../views/principal.php");
 // require_once("../views/V_Usuarios.php");
+?>

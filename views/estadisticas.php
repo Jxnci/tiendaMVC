@@ -1,40 +1,28 @@
 <main>
     <div class="estasGeneral">
         <div class="estasGeneral__item">
-            <span>52</span>
+            <img src="../icons/icons8_sell_stock_100px_1.png" alt="imgagen estadistica">
             <div class="eg__detalle">
+                <span>102</span>
                 <h5>Cantidad de Ventas</h5>
-                <img src="../icons/icons8_checkout_80px_1.png" alt="imgagen estadistica">
-            </div>
-            <div>
-                <h6><a href=""> Mas Información </h6></a>
-                <i></i>
             </div>
         </div>
         <div class="estasGeneral__item">
-            <span>12</span>
+            <img src="../icons/icons8_group_100px.png" alt="imgagen estadistica">
             <div class="eg__detalle">
+                <span>152</span>
                 <h5>Cantidad de Clientes</h5>
-                <img src="../icons/icons8_people_skin_type_7_80px.png" alt="imgagen estadistica">
-            </div>
-            <div>
-                <h6><a href=""> Mas Información </h6></a>
-                <i></i>
             </div>
         </div>
         <div class="estasGeneral__item">
-            <span>136</span>
+            <img src="../icons/icons8_earrings_100px.png" alt="imgagen estadistica">
             <div class="eg__detalle">
+                <span>136</span>
                 <h5>Cantidad de Productos</h5>
-                <img src="../icons/icons8_one_ring_80px.png" alt="imgagen estadistica">
-            </div>
-            <div>
-                <h6><a href=""> Mas Información </h6></a>
-                <i></i>
             </div>
         </div>
     </div>
-    <div class="estadisticas">
+    <div class="datos">
         <table>
             <tr>
                 <th>titulo de tabla</th>
