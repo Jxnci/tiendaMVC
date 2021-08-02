@@ -17,7 +17,7 @@
                 $um->cmbTipoUsuario();
                 ?>
             </select>
-            <a href='insertar.php'><input type='submit' value='Agregar' name="btntnAgregar"></a>
+            <a href=''><input type='submit' value='Agregar' name="btntAgregar"></a>
         </form>
     </div>
     <div class="datos">

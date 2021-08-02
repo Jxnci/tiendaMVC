@@ -51,7 +51,7 @@ header nav{
 }
 
 header h1{
-    color: var(--color5);
+    color: var(--color3);
     font-weight: bold;;
 }
 
@@ -61,18 +61,6 @@ header span{
 }
 
 /*         Main          */
-main{
-    height: 100%;
-    overflow-y: scroll;
-}
-
-main::-webkit-scrollbar{
-    width: 2px;
-    background: var(--color3);
-}
-main::-webkit-scrollbar-thumb{
-    background: var(--color2);
-}
 table{
     background: var(--color0);
     border-collapse: collapse;
@@ -85,6 +73,15 @@ table{
     background: var(--color0);
     box-shadow: 0px 0px 10px -2px var(--color2);
     border-radius: 5px;
+    height: 390px;
+    overflow-y: scroll;
+}
+.datos::-webkit-scrollbar{
+    width: 2px;
+    background: var(--color3);
+}
+.datos::-webkit-scrollbar-thumb{
+    background: var(--color2);
 }
 
 th, td {
@@ -110,6 +107,9 @@ td{
     display: flex;
     background: var(--color0);
     justify-content: center;
+}
+.formIngresoDatos form{
+    text-align: center;
 }
 .principal{
     display: flex;
@@ -149,14 +149,13 @@ aside section{
     background: linear-gradient(to bottom, rgba(28, 7, 46,.9) 40%, rgba(110, 22, 43,.9));
     height: 100vh;
 }
+li:first-child{
+    padding-top: 10px;
+}
 li{
     text-align: start;
-    padding: 10px 0 10px 25px;
+    padding: 5px 0 10px 25px;
     list-style: none;
-    border-bottom: solid 1px var(--color4);
-}
-li i{
-    padding-right: 10px;
 }
 a{
     letter-spacing: .8px;
@@ -172,6 +171,12 @@ a:hover{
     margin: 15px 15px 0;
     width: 180px;
 }
+.informacion_usuario{
+    padding: 0 10px;
+}
+.informacion_usuario h4{
+    padding: 10px;
+}
 aside h4{
     color:var(--color1);
     text-align: center;
@@ -182,6 +187,7 @@ aside h4{
 .lateral{
     background: var(--color1);
     font-size: 95%;
+    height: 550px;
     overflow-y: scroll;
 }
 .lateral::-webkit-scrollbar{
@@ -195,7 +201,8 @@ aside h4{
     margin: 20px 20px 10px;
 }
 .card{
-    border: solid 2px var(--color3);
+    border-left: solid 2px var(--color3);
+    border-right: solid 2px var(--color3);
     padding: 10px;
     margin: 10px 20px;
     background: var(--color0);
@@ -260,17 +267,16 @@ button:hover{
     color: var(--color4);
 }
 
-
 /*          MENU ESTADISTICAS          */
 .estasGeneral{
     display: flex;
-    margin: 0 10px;
+    margin: 0 8px;
     justify-content: center;
 }
 .estasGeneral__item{
     display: flex;
-    margin: 20px 10px;
-    padding: 10px 30px;
+    margin: 20px 10px 0;
+    padding: 0px 20px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px -2px var(--color2);
     background:linear-gradient(to left,#894054, var(--color6));
@@ -285,6 +291,7 @@ button:hover{
     color: var(--color1);
 }
 .estasGeneral__item span{
+    height: 50px;
     padding: 0 10px;
     font-size: 40px;
 }
@@ -300,7 +307,6 @@ button:hover{
     width: 80px;
     height: 80px;
     align-items: center;
-    /* display: flex; */
     align-content: center;
     margin: auto;
 }

@@ -1,5 +1,5 @@
 <?php
-require_once("../models/M_Usuarios.php");
+require_once("../models/M_TipoUsuario.php");
 
 $usuarios = new UsuarioModel;
 $matrizUsuario = $usuarios->getUsuario();
@@ -7,24 +7,18 @@ if (isset($_GET["opcion"])) {
     switch ($_GET["opcion"]) {
         case 'eliminar':
             $usuarios->deleteUsuario($_GET["fila"]);
-            header("Location: ../views/principal.php?ventana=usuario");
+            header("Location: ../views/principal.php?ventana=tipusu");
             break;
         case 'nuevo':
             if (isset($_POST["btnAgregar"])) {
                 $des = $_POST["txtDesc"];
-                $ruc = $_POST["txtRuc"];
-                $dni = $_POST["txtDni"];
-                $ruc = $_POST["txtRuc"];
-                $dni = $_POST["txtDni"];
-                $ruc = $_POST["txtRuc"];
-                $dni = $_POST["txtDni"];
                 $pro->nuevoUsuario($descripcion,$ruc,$dni);
-                header("Location: ../views/principal.php?ventana=usuario");
+                header("Location: ../views/principal.php?ventana=tipusu");
             }
             break;
         case 'editar':
             $pro->editarUsuario($_GET["fila"]);
-            header("Location: ../views/principal.php?ventana=usuario");
+            header("Location: ../views/principal.php?ventana=tipusu");
             break;
         default:
             echo "No suceda nada :c";

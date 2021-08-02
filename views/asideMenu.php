@@ -4,7 +4,7 @@
             <img src="../icons/logo.png" alt="Logo Perfecta">
         </div>
         <div>
-            <div>
+            <div class="informacion_usuario">
                 <h4><i class="fas fa-user-circle"></i> <br> <?= $_SESSION["nombres"]; ?> <br> <?= $_SESSION["tipo"]; ?></h4>
             </div>
             <ul>
@@ -25,7 +25,7 @@
         </div>
         <div>
             <ul>
-                <li>
+                <li class="li-end">
                     <form action="../models/sesion.php" method="POST">
                         <input type="submit" value="Cerrar Sesión" name="btnCerrarSesion" class="btcerrars">
                     </form>
