@@ -377,6 +377,17 @@ button:hover{
     background: var(--color1);
     opacity: .5;
 }
+#verDatos{
+    height: 300px;
+    overflow-y: scroll;
+}
+#verDatos::-webkit-scrollbar{
+    width: 2px;
+    background: var(--color3);
+}
+#verDatos::-webkit-scrollbar-thumb{
+    background: var(--color2);
+}
 .ReportesStyle,.estVentas{
     margin: 0 10px 0 0;
     background: var(--color0);
