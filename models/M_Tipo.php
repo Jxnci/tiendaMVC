@@ -1,6 +1,6 @@
 <?php
 
-class CategoriaModel {
+class TipoModel {
     private $db;
     private $usuarios;
     private $mensaje;
@@ -11,16 +11,16 @@ class CategoriaModel {
         $this->mensaje = "";
     }
 
-    public function getCategoria() {
-        $sql = $this->db->query("SELECT * FROM categoria");
+    public function getTipUsu() {
+        $sql = $this->db->query("SELECT * FROM tipousuario");
         while ($fila = $sql->fetch_assoc()) {
-            $this->categorias[] = $fila;
+            $this->tipUsu[] = $fila;
         }
-        return $this->categorias;
+        return $this->tipUsu;
     }
 
-    public function nuevaCategoria($desc) {
-        $sql = "INSERT INTO categoria (idtipoproducto,descripcion) VALUES (".(intval($this->AiCategoria())+1).",'".$desc."')";
+    public function nuevoTipo($desc) {
+        $sql = "INSERT INTO tipousuario (idtipousuario,descripcion) VALUES (".(intval($this->AiTipo())+1).",'".$desc."')";
         if ($this->db->query($sql) === TRUE) {
             $this->mensaje = "La categoria se agrego correctamente";
         } else {
@@ -29,24 +29,24 @@ class CategoriaModel {
         $this->db->close();
     }
 
-    function AiCategoria(){
-        $sql = "SELECT idtipoproducto FROM categoria ORDER BY idtipoproducto DESC LIMIT 1";
+    function AiTipo(){
+        $sql = "SELECT idtipousuario FROM tipousuario ORDER BY idtipousuario DESC LIMIT 1";
         $resultado = mysqli_query($this->db, $sql);
         $datos = mysqli_fetch_array($resultado);
         return $datos[0];
     }
 
-    public function deleteCategoria($fila) {
-        $sql = "DELETE FROM categoria WHERE idtipoproducto=" . $fila;
+    public function deleteTipo($fila) {
+        $sql = "DELETE FROM tipousuario WHERE idtipousuario=" . $fila;
         if ($this->db->query($sql) === TRUE) {
-            $this->mensaje = "La Categoria se elimino correctamente";
+            $this->mensaje = "El tipo de usuario se eliminó correctamente";
         } else {
             $this->mensaje = "No se pudo eliminar: " . $this->db->error;
         }
         $this->db->close();
     }
 
-    public function editarCategoria($fila) {
+    public function editarTipo($fila) {
         $sql = "SELECT * FROM tipousuario";
         $resultado = mysqli_query($this->db, $sql);
         $cant = mysqli_num_rows($resultado);

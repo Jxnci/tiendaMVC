@@ -1,7 +1,11 @@
 <header>
     <nav>
         <div>
-            <h1>Panel De control de [Objetos]</h1>
+            <?php
+            require_once("../controllers/C_principal.php");
+            $controlVentana = new controlVentana;
+            ?>
+            <h1>Panel De control de <?=$controlVentana->mostrarTitulo($_GET["ventana"])?></h1>
         </div>
         
         <div>

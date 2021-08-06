@@ -19,44 +19,38 @@ if (isset($_SESSION["usuario"])) {
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <link rel="shortcut icon" href="../icons/icons8_jewel.ico" type="image/x-icon">
+    <title>Bisuteria Perfecta</title>
 </head>
 
-<body>
+<body >
     <div class="contenedor">
         <div>
             <?php
             require("../views/asideMenu.php");
             ?>
         </div>
-
         <div class="principal">
             <div>
                 <?php
-                require("../views/headerMenu.php");
+                require("../controllers/C_principal.php");
+                $controlVentana = new controlVentana;
+                $controlVentana->mostrarTitulo($_GET["ventana"]);
                 ?>
             </div>
             <div class="principal__items">
                 <div class="ventanas">
                     <?php
-                    require("../controllers/C_principal.php");
-                    if (isset($_GET["ventana"])) {
-                        $controlVentana = new controlVentana;
-                        $controlVentana->mostrarVentana($_GET["ventana"]);
-                    } else {
-                        $controlVentana = new controlVentana;
-                        $controlVentana->mostrarVentana("estad");
-                    }
+                    $controlVentana->mostrarVentana($_GET["ventana"]);
                     ?>
                 </div>
                 <?php
-                require("../views/asideDMenu.php");
+                require_once("../views/asideDMenu.php");
                 ?>
             </div>
         </div>
-
     </div>
+    <div id="principal"></div>
 </body>
 <script src="https://kit.fontawesome.com/e731879585.js" crossorigin="anonymous"></script>
-
 </html>

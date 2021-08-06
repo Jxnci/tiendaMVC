@@ -1,23 +1,24 @@
-<?php require_once("../models/M_Ventas.php"); ?>
-
 <main>
     <?php
     // require("../models/paginacion.php");
+    require_once("../models/M_Venta.php");
+    $vm = new VentaModel;
     ?>
     <div class="formIngresoDatos">
-        <form action="../controllers/C_Usuarios.php?opcion=nuevo" method="post">
-            <input type="text" name="txtUsu" id="" placeholder="Usuario" require>
-            <input type="password" name="txtCla" id="" placeholder="Clave" require>
-            <input type="text" name="txtDir" id="" placeholder="Dirección" require><br>
-            <input type="text" name="txtTel" id="" placeholder="Teléfono" require>
-            <input type="text" name="txtNom" id="" placeholder="Nombres" require>
-            <select name="txtTipUsu" id="">
+        <form action="../controllers/C_Venta.php?opcion=nuevo" method="post">
+            <input type="date" name="fecha" id="" require>
+            <input type="text" name="Total" id="" placeholder="Total" require>
+            <select name="cmbPro" id="">
                 <?php
-                // $um = new UsuarioModel;
-                // $um->cmbTipoUsuario();
+                $vm->llenarCombo("producto");
                 ?>
             </select>
-            <a href='insertar.php'><input type='submit' value='Agregar'></a>
+            <select name="cmbusu" id="">
+                <?php
+                $vm->llenarCombo("usuario");
+                ?>
+            </select>
+            <a href=''><input type='submit' value='Agregar' name="btnAgregar"></a>
         </form>
     </div>
     <div class="datos">
@@ -25,34 +26,31 @@
             <thead>
                 <tr>
                     <th>Id</th>
+                    <th>Fecha</th>
+                    <th>Total</th>
+                    <th>Producto</th>
                     <th>Usuario</th>
-                    <th>clave</th>
-                    <th>Dirección</th>
-                    <th>telefono</th>
-                    <th class="ancho">Nombres</th>
-                    <th>Tipo</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
-                // foreach ($matrizUsuario as $user) {
-                //     echo "<tr>";
-                //     echo "<td>" . $user["idusuario"] . "</td>";
-                //     echo "<td>" . $user["usuario"] . "</td>";
-                //     echo "<td>" . $user["clave"] . "</td>";
-                //     echo "<td>" . $user["direccion"] . "</td>";
-                //     echo "<td>" . $user["telefono"] . "</td>";
-                //     echo "<td>" . $user["nombres"] . "</td>";
-                //     echo "<td>" . $user["tipoUsuario_idtipousuario"] . "</td>";
-                //     echo "<td><a href='' class='bteditar'>Editar</a>";
-                //     echo "<a href='../controllers/C_Usuarios.php?opcion=eliminar&fila=" . $user["idusuario"] .
-                //      "' class='bteliminar'>Eliminar</a>";
-                //     echo "</td>";
+                require_once("../controllers/C_Venta.php");
+                foreach ($matrizVenta as $venta) {
+                    echo "<tr>";
+                    echo "<td>" . $venta["idventa"] . "</td>";
+                    echo "<td>" . $venta["fecha"] . "</td>";
+                    echo "<td>" . $venta["total"] . "</td>";
+                    echo "<td>" . $venta["producto_idproducto"] . "</td>";
+                    echo "<td>" . $venta["usuario_idusuario"] . "</td>";
+                    echo "<td><a href='' class='bteditar'>Editar</a>";
+                    echo "<a href='../controllers/C_Venta.php?opcion=eliminar&fila=" . $venta["idventa"] .
+                     "' class='bteliminar'>Eliminar</a>";
+                    echo "</td>";
                     // for ($i = 1; $i < $totalPaginas; $i++) {
                     //     echo "<a href='?pagina=" . $i . "'>" . $i . "</a>";
                     // }
-                // }
+                }
                 ?>
             </tbody>
         </table>

@@ -1,23 +1,23 @@
 <?php
-require_once("../models/M_TipoUsuario.php");
+require_once("../models/M_Tipo.php");
 
-$usuarios = new UsuarioModel;
-$matrizUsuario = $usuarios->getUsuario();
+$tipos = new TipoModel;
+$matrizTipos = $tipos->getTipUsu();
 if (isset($_GET["opcion"])) {
     switch ($_GET["opcion"]) {
         case 'eliminar':
-            $usuarios->deleteUsuario($_GET["fila"]);
+            $tipos->deleteTipo($_GET["fila"]);
             header("Location: ../views/principal.php?ventana=tipusu");
             break;
         case 'nuevo':
             if (isset($_POST["btnAgregar"])) {
                 $des = $_POST["txtDesc"];
-                $pro->nuevoUsuario($descripcion,$ruc,$dni);
+                $tipos->nuevoTipo($des);
                 header("Location: ../views/principal.php?ventana=tipusu");
             }
             break;
         case 'editar':
-            $pro->editarUsuario($_GET["fila"]);
+            $tipos->editarTipo($_GET["fila"]);
             header("Location: ../views/principal.php?ventana=tipusu");
             break;
         default:
@@ -26,6 +26,5 @@ if (isset($_GET["opcion"])) {
             break;
     }
 }
-// header("Location: principal.php");
-require_once("../views/V_Usuarios.php");
+require_once("../views/V_TipoUsuario.php");
 ?>

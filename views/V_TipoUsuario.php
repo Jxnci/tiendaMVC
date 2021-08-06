@@ -1,3 +1,4 @@
+<?php require_once("../models/M_Tipo.php"); ?>
 <main>
     <?php
     // require("../models/paginacion.php");
@@ -19,12 +20,13 @@
             </thead>
             <tbody>
                 <?php
-                foreach ($matrizUsuario as $user) {
+                require_once("../controllers/C_TipoUsuario.php");
+                foreach ($matrizTipos as $tipo) {
                     echo "<tr>";
-                    echo "<td>" . $user["idtipousuario"] . "</td>";
-                    echo "<td>" . $user["descripcion"] . "</td>";
+                    echo "<td>" . $tipo["idtipousuario"] . "</td>";
+                    echo "<td>" . $tipo["descripcion"] . "</td>";
                     echo "<td><a href='' class='bteditar'>Editar</a>";
-                    echo "<a href='../controllers/C_Usuarios.php?opcion=eliminar&fila=" . $user["idusuario"] .
+                    echo "<a href='../controllers/C_TipoUsuario.php?opcion=eliminar&fila=" . $tipo["idtipousuario"] .
                      "' class='bteliminar'>Eliminar</a>";
                     echo "</td>";
                     // for ($i = 1; $i < $totalPaginas; $i++) {

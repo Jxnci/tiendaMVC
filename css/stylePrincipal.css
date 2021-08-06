@@ -242,7 +242,7 @@ button:hover{
     text-decoration: none;
 }
 .bteditar{
-    font-family: 'Shrikhand', cursive;;
+    font-family: 'Shrikhand', cursive;
     background: var(--color1);
     border: solid 1px var(--color3);
     color: var(--color3);
@@ -251,7 +251,7 @@ button:hover{
 }
 .bteliminar{
     font-family: 'Shrikhand', cursive;;
-    background: var(--color3);
+    background: var(--color6);
     color: var(--color1);
     transition: all .2s;
 }
@@ -260,6 +260,7 @@ button:hover{
     color: var(--color1);
     border: none;
     padding: 10px;
+    margin: 0 20px;
     transition: all .2s;
 }
 .btcerrars:hover{
@@ -275,6 +276,7 @@ button:hover{
 }
 .estasGeneral__item{
     display: flex;
+    min-width: 240px;
     margin: 20px 10px 0;
     padding: 0px 20px;
     border-radius: 5px;
@@ -309,4 +311,88 @@ button:hover{
     align-items: center;
     align-content: center;
     margin: auto;
+}
+.estVentas_Cont{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.estasSecundaria{
+    display: flex;
+    margin: 0 8px;
+    justify-content: center;
+    text-align: center;
+}
+.estasSecundaria__item{
+    display: flex;
+    justify-content: space-around;
+    min-width: 250px;
+    margin: 20px 0 0;
+    padding: 0px 15px 10px;
+    text-align: center;
+    box-shadow: 0px 0px 10px -2px var(--color2);
+    background:linear-gradient(to left,#443154, var(--color3));
+    border-top: 10px solid transparent;
+    color: var(--color1);
+}
+.estasSecundaria__item:first-child{
+    border-radius: 10px 0 0 10px;
+}
+.estasSecundaria__item:nth-child(2){
+    background: var(--color6);
+    background:linear-gradient(to left,#8D465A, var(--color6));
+}
+.estasSecundaria__item:last-child{
+    border-radius: 0px 10px 10px 0px;
+    background:linear-gradient(to left,#7843A4, var(--color5));
+}
+.estasSecundaria__item span{
+    padding: 0 10px;
+    font-size: 26px;
+}
+.estasSecundaria__item h4{
+    display: flex;
+    align-items: center;
+}
+
+.estVentas{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.proVendido a{
+    border-radius: 5px;
+    text-align: center;
+    padding: 0 5px;
+    background: var(--color3) ;
+}
+/* -------------Manejode reportes ------- */
+#principal{
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 200;
+    background: var(--color1);
+    opacity: .5;
+}
+.ReportesStyle,.estVentas{
+    margin: 0 10px 0 0;
+    background: var(--color0);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px -2px var(--color2);
+}
+.Reporte{
+    padding: 10px 20px;
+    display: none;
+    position: absolute;
+    width: 600px;
+    min-height: 400px;
+    background: var(--color3);
+    top: 20%;
+    left: 25%;
+    border-radius: 10px;
+    z-index: 400;
 }

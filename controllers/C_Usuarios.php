@@ -11,19 +11,18 @@ if (isset($_GET["opcion"])) {
             break;
         case 'nuevo':
             if (isset($_POST["btnAgregar"])) {
-                $des = $_POST["txtDesc"];
-                $ruc = $_POST["txtRuc"];
-                $dni = $_POST["txtDni"];
-                $ruc = $_POST["txtRuc"];
-                $dni = $_POST["txtDni"];
-                $ruc = $_POST["txtRuc"];
-                $dni = $_POST["txtDni"];
-                $pro->nuevoUsuario($descripcion,$ruc,$dni);
+                $usu = $_POST["txtUsu"];
+                $cla = $_POST["txtCla"];
+                $dir = $_POST["txtDir"];
+                $tel = $_POST["txtTel"];
+                $nom = $_POST["txtNom"];
+                $tipusu = $_POST["txtTipUsu"];
+                $usuarios->nuevoUsuario($usu,$cla,$dir,$tel,$nom,$tipusu);
                 header("Location: ../views/principal.php?ventana=usuario");
             }
             break;
         case 'editar':
-            $pro->editarUsuario($_GET["fila"]);
+            $usuarios->editarUsuario($_GET["fila"]);
             header("Location: ../views/principal.php?ventana=usuario");
             break;
         default:

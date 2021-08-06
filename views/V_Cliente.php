@@ -6,8 +6,13 @@
         <form action="../controllers/C_Cliente.php?opcion=nuevo" method="post">
             <input type="text" name="txtNombre" id="" placeholder="Nombres" require>
             <input type="text" name="txtDireccion" id="" placeholder="Dirección" require><br>
-            <input type="text" name="txtruc" id="" placeholder="RUC" require>
-            <input type="text" name="txtDNI" id="" placeholder="DNI" require>
+            <input type="radio" name="txtDireccion" id="" placeholder="Dirección" require>Ruc
+            <input type="radio" name="txtDireccion" id="" placeholder="Dirección" require>Dni
+            <?php
+                // if(){
+
+                // }
+            ?>
             <a href=''><input type='submit' value='Agregar' name="btnAgregar"></a>
         </form>
     </div>

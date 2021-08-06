@@ -2,7 +2,9 @@
 require_once("../models/M_Categoria.php");
 
 $cat = new CategoriaModel;
+
 $matrizCategoria = $cat->getCategoria();
+
 if (isset($_GET["opcion"])) {
     switch ($_GET["opcion"]) {
         case 'eliminar':

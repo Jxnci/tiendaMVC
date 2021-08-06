@@ -19,28 +19,34 @@ class UsuarioModel {
         return $this->usuarios;
     }
 
-    public function nuevoUsuario() {
-        $sql = "INSERT INTO usuario (usuario,clave,direccion,telefono,nombres,tipoUsuario_idtipousuario)
-         VALUES ('','','','','','')";
+    public function nuevoUsuario($usu,$cla,$dir,$tel,$nom,$tipusu) {
+        $sql = "INSERT INTO usuario (idusuario,usuario,clave,direccion,telefono,nombres,tipoUsuario_idtipousuario)
+         VALUES (".(intval($this->AiUsuario())+1).",'$usu','$cla','$dir','$tel','$nom',".($tipusu+1).")";
         if ($this->db->query($sql) === TRUE) {
             $this->mensaje = "El usuario se agrego correctamente";
         } else {
             $this->mensaje = "No se pudo agregar: " . $this->db->error;
         }
         $this->db->close();
-        header("Location: ../views/principal.php");
+    }
+    function AiUsuario(){
+        $sql = "SELECT idusuario FROM usuario ORDER BY idusuario DESC LIMIT 1";
+        $resultado = mysqli_query($this->db, $sql);
+        $datos = mysqli_fetch_array($resultado);
+        return $datos[0];
     }
 
     public function deleteUsuario($fila) {
         $sql = "DELETE FROM usuario WHERE idusuario=" . $fila;
         if ($this->db->query($sql) === TRUE) {
-            $this->mensaje = "El usuario se elimino correctamente";
+            $this->mensaje = "El usuario se eliminó correctamente";
         } else {
             $this->mensaje = "No se pudo eliminar: " . $this->db->error;
         }
         $this->db->close();
-        header("Location: ../views/principal.php");
     }
+
+    public function editarUsuario(){}
 
     public function cmbTipoUsuario() {
         $sql = "SELECT * FROM tipousuario";

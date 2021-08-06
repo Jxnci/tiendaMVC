@@ -1,9 +1,11 @@
 <?php
 
 class CategoriaModel {
+    
     private $db;
     private $usuarios;
     private $mensaje;
+
     public function __construct() {
         require_once("Conectar.php");
         $this->db = Conectar::Conexion();

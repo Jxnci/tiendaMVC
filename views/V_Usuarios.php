@@ -5,7 +5,7 @@
     // require("../models/paginacion.php");
     ?>
     <div class="formIngresoDatos">
-        <form action="../controllers/C_Usuarios.php?opcion=nuevo" method="post">
+        <form action="../controllers/C_Usuarios.php?opcion=nuevo" method="POST">
             <input type="text" name="txtUsu" id="" placeholder="Usuario" require>
             <input type="password" name="txtCla" id="" placeholder="Clave" require>
             <input type="text" name="txtDir" id="" placeholder="Dirección" require><br>
@@ -17,7 +17,7 @@
                 $um->cmbTipoUsuario();
                 ?>
             </select>
-            <a href=''><input type='submit' value='Agregar' name="btntAgregar"></a>
+            <a href=''><input type='submit' value='Agregar' name="btnAgregar"></a>
         </form>
     </div>
     <div class="datos">

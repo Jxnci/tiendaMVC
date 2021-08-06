@@ -10,7 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <title>Perfecta</title>
+    <link rel="shortcut icon" href="icons/icons8_jewel.ico" type="image/x-icon">
+    <title>Bisuteria Perfecta</title>
 </head>
 
 <body>
