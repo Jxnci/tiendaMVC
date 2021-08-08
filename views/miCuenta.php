@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (isset($_SESSION["usuario"])) {
+} else {
+    header("Location:../views/sesionCerrada.html");
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,6 +14,5 @@
     <title>Mi cuenta</title>
 </head>
 <body>
-    
 </body>
 </html>

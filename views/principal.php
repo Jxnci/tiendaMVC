@@ -2,7 +2,7 @@
 session_start();
 if (isset($_SESSION["usuario"])) {
 } else {
-    header("Location:../views/sesionCerrada.php");
+    header("Location:../views/sesionCerrada.html");
 }
 ?>
 

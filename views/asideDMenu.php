@@ -1,3 +1,6 @@
+<?php
+    require_once("../models/Operaciones.php");
+?>
 <section class="lateral">
     <div>
         <h3>historial de operaciones</h3>
