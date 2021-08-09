@@ -52,12 +52,16 @@ header nav{
 
 header h1{
     color: var(--color3);
-    font-weight: bold;;
+    font-weight: bold;
 }
 
 header span{
+    color: var(--color6);
+    font-weight: bold;
+}
+header h3,header h4{
     color: var(--color3);
-    font-weight: bold;;
+    font-weight: bold;
 }
 
 /*         Main          */
@@ -406,4 +410,7 @@ button:hover{
     left: 25%;
     border-radius: 10px;
     z-index: 400;
+}
+.btnCerrarVentana{
+    text-align: end;
 }

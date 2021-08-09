@@ -75,7 +75,7 @@ $est = new EstadisticaModel;
     </div>
 
     <div class="Reporte" id="porFechas">
-        <div><a href="JavaScript:cerrar()"><i class="fas fa-times-circle">Cerrar</i></a></div>
+        <div class="btnCerrarVentana"><a href="JavaScript:cerrar()">Cerrar <i class="fas fa-times-circle"></i></a></div>
         <div>
             <h2 style="color: #fff;">Reporte por Fechas</h2>
             <div>
@@ -119,7 +119,7 @@ $est = new EstadisticaModel;
     </div>
 
     <div class="Reporte" id="masVendido">
-        <div><a href="JavaScript:cerrar()"><i class="fas fa-times-circle">Cerrar</i></a></div>
+        <div class="btnCerrarVentana"><a href="JavaScript:cerrar()">Cerrar <i class="fas fa-times-circle"></i></a></div>
         <div>
             <h2 style="color: #fff;">Producto mas Vendido</h2>
             <div id="verDatos">
@@ -140,7 +140,7 @@ $est = new EstadisticaModel;
         </div>
     </div>
     <div class="Reporte" id="UsuarioVendido">
-        <div><a href="JavaScript:cerrar()"><i class="fas fa-times-circle">Cerrar</i></a></div>
+        <div class="btnCerrarVentana"><a href="JavaScript:cerrar()">Cerrar <i class="fas fa-times-circle"></i></a></div>
         <div>
             <h2 style="color: #fff;">Usuario que vendio mas Historicamente</h2>
             <div id="verDatos">
